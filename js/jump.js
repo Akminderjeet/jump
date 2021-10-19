@@ -32,6 +32,18 @@ document.onkeydown = function (e) {
 
 }
 
+document.onclick = function () {
+
+
+    var ss = document.querySelector('.boy');
+    ss.classList.remove('animboy');
+    ss.classList.add('animboy');
+    setTimeout(() => {
+        ss.classList.remove('animboy');
+    }, 600)
+
+
+}
 
 var myvar = setInterval(start, 10);
 
