@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image:url(../pics/cartoon-crosswalks-street-road-crossing-highway-vector-23672574.jpg);
+    height: 100vh;
+    width: 100%;background-size: cover;
+    overflow: hidden;
+}
+.car{
+    background-image: url(../pics/tree1.png);
+    width: 50px;
+    height:80px;
+    position: absolute;
+    background-size: cover;
+    bottom: 0px;
+    
+   
+}
+.boy{
+    background-image: url(../pics/boy-screaming-clipart-2\ \(1\).jpg);
+    width: 70px;
+    height:130px;
+    position: absolute;
+    background-size: cover;
+    bottom: 0px;
+
+    left:80px; 
+   
+}
+.boy2{
+    background-image: url(../pics/boy-screaming-clipart-2\ \(1\).jpg);
+    width: 70px;
+    height:130px;
+    position: absolute;
+    background-size: cover;
+    bottom: 0px;
+transform: rotateZ(-90deg);
+    left:0px; 
+   
+}
+.caranim{
+    animation-name: carmove;
+    
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+.animboy{
+    animation: boyjump .6s linear;
+}
+@keyframes boyjump{
+    0%{
+bottom: 0px;
+    }
+    50%{
+        bottom: 200px;
+    }
+    100%{
+        bottom: 0px;
+            }
+
+}
+.animboy2{
+    animation: boyjump2 .6s linear;
+}
+@keyframes boyjump2{
+    0%{
+transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(300px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+  
+
+}
+
+@keyframes carmove{
+0%{
+    right: -10vw;
+}
+100%{
+right:100vw;
+
+
+;
+}
+
+ 
+}
+.gamecontainer{
+    overflow: hidden;
+}
+.boyout{
+    animation-name: boout;
+    
+    animation-duration: 1s;
+    animation-iteration-count:1;
+    animation-timing-function:ease-in;
+}
+@keyframes boout{
+0%{
+
+}
+50%{
+    transform:rotateZ(-45deg);
+    left: 40px;
+    /* bottom: 100px; */
+}
+100%{
+    left: 0px;
+    transform:rotateZ(-90deg);
+    bottom: 0px;
+}
+
+}
+.gameover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: .5;
+    visibility: hidden;
+}
+#restart{
+    padding: 5px;
+    border-radius: 2px;
+    background-color: chocolate;
+    color: White;
+    font-size: 15px;
+}
+#final{
+    font-size: 20px;
+    font-weight: bold;
+}
